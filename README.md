@@ -13,6 +13,7 @@
 | `style.css` | Тёмная тема, анимации, адаптив под мобильные |
 | `script.js` | Печатающийся текст, появление блоков при скролле, меню, частицы на canvas |
 | `deploy.py` | Скрипт публикации на GitHub Pages (Python, без сторонних библиотек) |
+| `deploy_local.py` | То же самое, но токен берётся из Windows Credential Manager |
 | `.nojekyll` | Нужен GitHub Pages, чтобы Jekyll не трогал статику |
 | `netlify.toml` / `vercel.json` | Конфиги на случай деплоя на Netlify или Vercel |
 
@@ -35,7 +36,22 @@ kirill@example.com          → твоя почта
 
 ## Публикация на GitHub Pages (бесплатно и навсегда)
 
-### 1. Создай токен
+Сайт уже опубликован: **https://masenao.github.io/kirill-card/**
+
+### Обновить сайт после правок
+
+Если вход в GitHub уже сохранён в системе (Windows Credential Manager), достаточно:
+
+```powershell
+cd kirill-card
+python deploy_local.py
+```
+
+Скрипт сам возьмёт сохранённый токен, зальёт файлы и обновит GitHub Pages.
+
+### Публикация с нуля на другом аккаунте
+
+#### 1. Создай токен
 
 1. Зайди на https://github.com/settings/tokens
 2. Нажми **Generate new token (classic)**
