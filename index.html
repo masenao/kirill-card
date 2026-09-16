@@ -48,8 +48,8 @@
                 </div>
                 <ul class="hero__badges reveal">
                     <li>🐍 Python</li>
-                    <li>⚙️ Django / FastAPI</li>
                     <li>🤖 Telegram Bots</li>
+                    <li>🌐 Веб-парсинг</li>
                 </ul>
             </div>
         </section>
@@ -114,24 +114,24 @@
                         <p>Основной язык: ООП, асинхронность, работа с API и базами данных.</p>
                     </div>
                     <div class="skill-card reveal">
-                        <div class="skill-card__icon">🌐</div>
-                        <h3>Django &amp; FastAPI</h3>
-                        <p>REST API, модели и ORM, маршрутизация, аутентификация.</p>
-                    </div>
-                    <div class="skill-card reveal">
                         <div class="skill-card__icon">🤖</div>
                         <h3>Telegram Bots</h3>
-                        <p>Боты на aiogram: команды, клавиатуры, интеграции с сервисами.</p>
+                        <p>Боты на python-telegram-bot: команды, аргументы, обработчики.</p>
                     </div>
                     <div class="skill-card reveal">
-                        <div class="skill-card__icon">🗄️</div>
-                        <h3>Базы данных</h3>
-                        <p>PostgreSQL, SQLite, SQL-запросы и миграции.</p>
+                        <div class="skill-card__icon">🌐</div>
+                        <h3>Веб-парсинг</h3>
+                        <p>requests и BeautifulSoup — забираю нужные данные со страниц.</p>
+                    </div>
+                    <div class="skill-card reveal">
+                        <div class="skill-card__icon">🔎</div>
+                        <h3>Работа с сетью</h3>
+                        <p>dnspython: DNS-запросы и разбор записей A, AAAA, CNAME, MX.</p>
                     </div>
                     <div class="skill-card reveal">
                         <div class="skill-card__icon">🧰</div>
                         <h3>Инструменты</h3>
-                        <p>Git, GitHub, Linux, Docker, виртуальные окружения.</p>
+                        <p>Git, GitHub, Linux, виртуальные окружения, .env и токены.</p>
                     </div>
                     <div class="skill-card reveal">
                         <div class="skill-card__icon">🚀</div>
@@ -151,33 +151,42 @@
                 <div class="projects-grid">
                     <article class="project reveal">
                         <div class="project__top">
-                            <span class="project__tag">Python · Flask</span>
+                            <span class="project__tag">Python · Telegram Bot</span>
                         </div>
-                        <h3>REST API для заметок</h3>
-                        <p>Сервис с CRUD-операциями, регистрацией и хранением данных в базе.</p>
+                        <h3>DNS-check бот</h3>
+                        <p>Бот, которому отправляешь любой домен — и он присылает все его
+                           DNS-записи: A, AAAA, CNAME и MX.</p>
                         <ul class="project__stack">
-                            <li>Flask</li><li>SQLite</li><li>JWT</li>
+                            <li>python-telegram-bot</li><li>dnspython</li><li>python-dotenv</li>
                         </ul>
+                        <a class="project__link" href="https://github.com/masenao/dns-check-bot1"
+                           target="_blank" rel="noopener">Смотреть код на GitHub →</a>
                     </article>
                     <article class="project reveal">
                         <div class="project__top">
-                            <span class="project__tag">Python · aiogram</span>
+                            <span class="project__tag">Python · Веб-парсинг</span>
                         </div>
-                        <h3>Telegram-бот</h3>
-                        <p>Бот с меню на клавиатуре, командами и уведомлениями для пользователей.</p>
+                        <h3>wikiparse</h3>
+                        <p>Парсер HTML-страниц: скачивает страницу, находит нужную таблицу
+                           через BeautifulSoup и выводит данные.</p>
                         <ul class="project__stack">
-                            <li>aiogram</li><li>requests</li><li>JSON</li>
+                            <li>requests</li><li>BeautifulSoup4</li><li>lxml</li>
                         </ul>
+                        <a class="project__link" href="https://github.com/masenao/wikiparse"
+                           target="_blank" rel="noopener">Смотреть код на GitHub →</a>
                     </article>
                     <article class="project reveal">
                         <div class="project__top">
-                            <span class="project__tag">Python · FastAPI</span>
+                            <span class="project__tag">HTML · CSS · JavaScript</span>
                         </div>
-                        <h3>API сокращения ссылок</h3>
-                        <p>Сервис коротких ссылок со статистикой переходов и валидацией данных.</p>
+                        <h3>Сайт-визитка</h3>
+                        <p>Этот самый сайт: тёмная тема, анимации и адаптив под мобильные.
+                           Без фреймворков и сборки.</p>
                         <ul class="project__stack">
-                            <li>FastAPI</li><li>Pydantic</li><li>Uvicorn</li>
+                            <li>HTML</li><li>CSS</li><li>JavaScript</li>
                         </ul>
+                        <a class="project__link" href="https://github.com/masenao/kirill-card"
+                           target="_blank" rel="noopener">Смотреть код на GitHub →</a>
                     </article>
                 </div>
             </div>
@@ -189,20 +198,20 @@
                 <h2 class="section__title reveal">Контакты</h2>
                 <p class="section__lead reveal">Открыт к общению, обмену опытом и новым идеям.</p>
                 <div class="contacts reveal">
-                    <a class="contact" href="https://t.me/" target="_blank" rel="noopener">
-                        <span class="contact__icon">✈️</span>
-                        <span class="contact__label">Telegram</span>
-                        <span class="contact__value">@kirill</span>
-                    </a>
-                    <a class="contact" href="https://github.com/" target="_blank" rel="noopener">
+                    <a class="contact" href="https://github.com/masenao" target="_blank" rel="noopener">
                         <span class="contact__icon">🐙</span>
                         <span class="contact__label">GitHub</span>
-                        <span class="contact__value">github.com/kirill</span>
+                        <span class="contact__value">github.com/masenao</span>
                     </a>
-                    <a class="contact" href="mailto:kirill@example.com">
+                    <a class="contact" href="https://github.com/masenao?tab=repositories" target="_blank" rel="noopener">
+                        <span class="contact__icon">📦</span>
+                        <span class="contact__label">Проекты</span>
+                        <span class="contact__value">все репозитории</span>
+                    </a>
+                    <a class="contact" href="mailto:chesterblazer@gmail.com">
                         <span class="contact__icon">✉️</span>
                         <span class="contact__label">Email</span>
-                        <span class="contact__value">kirill@example.com</span>
+                        <span class="contact__value">chesterblazer@gmail.com</span>
                     </a>
                 </div>
             </div>

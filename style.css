@@ -431,6 +431,20 @@ ul { list-style: none; }
     font-family: "Consolas", monospace;
 }
 
+.project__link {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.project__link:hover {
+    opacity: 0.8;
+    transform: translateX(4px);
+}
+
 /* ===== КОНТАКТЫ ===== */
 .contacts {
     display: grid;
