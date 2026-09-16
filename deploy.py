@@ -136,6 +136,13 @@ def main():
     )
     git("branch", "-M", "main")
     git("push", "-u", "origin", "main", "--force", token=token)
+
+    # Убираем токен из локального .git/config сразу после пуша
+    safe_remote = "https://github.com/%s/%s.git" % (login, repo)
+    subprocess.run(
+        ["git", "remote", "set-url", "origin", safe_remote],
+        cwd=PROJECT_DIR, capture_output=True, text=True,
+    )
     print("  Файлы загружены.")
 
     print("→ Включаю GitHub Pages...")
