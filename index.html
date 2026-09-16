@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Кирилл — 14 лет, backend-разработчик на Python. Создаю серверную логику, API и Telegram-ботов.">
+    <title>Кирилл — Python Backend Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Фоновая анимация из «частиц» рисуется на canvas -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#hero" class="logo">
+                <span class="logo__mark">&lt;/&gt;</span>
+                <span class="logo__text">Kirill</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#about" class="nav__link">Обо мне</a>
+                <a href="#skills" class="nav__link">Навыки</a>
+                <a href="#projects" class="nav__link">Проекты</a>
+                <a href="#contacts" class="nav__link">Контакты</a>
+            </nav>
+            <button class="burger" id="burger" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="container hero__inner">
+                <p class="hero__greeting reveal">Привет, я</p>
+                <h1 class="hero__title reveal">Кирилл</h1>
+                <p class="hero__subtitle reveal">
+                    <span id="typed"></span><span class="caret">|</span>
+                </p>
+                <p class="hero__desc reveal">
+                    Мне 14 лет, и я увлечён backend-разработкой на Python.
+                    Пишу API, ботов и автоматизирую всё, что можно автоматизировать.
+                </p>
+                <div class="hero__actions reveal">
+                    <a href="#projects" class="btn btn--primary">Мои проекты</a>
+                    <a href="#contacts" class="btn btn--ghost">Связаться</a>
+                </div>
+                <ul class="hero__badges reveal">
+                    <li>🐍 Python</li>
+                    <li>⚙️ Django / FastAPI</li>
+                    <li>🤖 Telegram Bots</li>
+                </ul>
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="section__title reveal">Обо мне</h2>
+                <div class="about">
+                    <div class="about__text reveal">
+                        <p>
+                            Меня зовут <strong>Кирилл</strong>, мне <strong>14 лет</strong>, и я
+                            backend-разработчик на <strong>Python</strong>. Мне нравится разбираться,
+                            как устроены сервисы «под капотом»: как данные ходят между клиентом и
+                            базой, как проектируются API и как один сервер обслуживает тысячи
+                            пользователей.
+                        </p>
+                        <p>
+                            Я постоянно учусь новому: читаю документацию, решаю задачи и делаю
+                            собственные пет-проекты. Верю, что возраст — не помеха, если есть
+                            любопытство и дисциплина.
+                        </p>
+                        <ul class="about__facts">
+                            <li><span>Имя</span><b>Кирилл</b></li>
+                            <li><span>Возраст</span><b>14 лет</b></li>
+                            <li><span>Роль</span><b>Backend-разработчик</b></li>
+                            <li><span>Основной язык</span><b>Python</b></li>
+                        </ul>
+                    </div>
+                    <div class="about__card reveal">
+                        <div class="code-window">
+                            <div class="code-window__bar">
+                                <i></i><i></i><i></i>
+                                <span>kirill.py</span>
+                            </div>
+<pre class="code-window__body"><code><span class="c-kw">class</span> <span class="c-cls">Developer</span>:
+    name = <span class="c-str">"Кирилл"</span>
+    age = <span class="c-num">14</span>
+    role = <span class="c-str">"backend"</span>
+    stack = [<span class="c-str">"Python"</span>, <span class="c-str">"Django"</span>, <span class="c-str">"FastAPI"</span>]
+
+    <span class="c-kw">def</span> <span class="c-fn">__init__</span>(self):
+        self.motivation = <span class="c-num">100</span>
+
+    <span class="c-kw">def</span> <span class="c-fn">build</span>(self, idea):
+        <span class="c-kw">while</span> <span class="c-num">True</span>:
+            <span class="c-kw">yield</span> self.learn(idea)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <div class="container">
+                <h2 class="section__title reveal">Навыки</h2>
+                <p class="section__lead reveal">Технологии, с которыми я работаю и которые изучаю.</p>
+                <div class="skills-grid">
+                    <div class="skill-card reveal">
+                        <div class="skill-card__icon">🐍</div>
+                        <h3>Python</h3>
+                        <p>Основной язык: ООП, асинхронность, работа с API и базами данных.</p>
+                    </div>
+                    <div class="skill-card reveal">
+                        <div class="skill-card__icon">🌐</div>
+                        <h3>Django &amp; FastAPI</h3>
+                        <p>REST API, модели и ORM, маршрутизация, аутентификация.</p>
+                    </div>
+                    <div class="skill-card reveal">
+                        <div class="skill-card__icon">🤖</div>
+                        <h3>Telegram Bots</h3>
+                        <p>Боты на aiogram: команды, клавиатуры, интеграции с сервисами.</p>
+                    </div>
+                    <div class="skill-card reveal">
+                        <div class="skill-card__icon">🗄️</div>
+                        <h3>Базы данных</h3>
+                        <p>PostgreSQL, SQLite, SQL-запросы и миграции.</p>
+                    </div>
+                    <div class="skill-card reveal">
+                        <div class="skill-card__icon">🧰</div>
+                        <h3>Инструменты</h3>
+                        <p>Git, GitHub, Linux, Docker, виртуальные окружения.</p>
+                    </div>
+                    <div class="skill-card reveal">
+                        <div class="skill-card__icon">🚀</div>
+                        <h3>Постоянное обучение</h3>
+                        <p>Читаю документацию, разбираю чужой код, делаю свои проекты.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="container">
+                <h2 class="section__title reveal">Проекты</h2>
+                <p class="section__lead reveal">То, что я уже сделал своими руками.</p>
+                <div class="projects-grid">
+                    <article class="project reveal">
+                        <div class="project__top">
+                            <span class="project__tag">Python · Flask</span>
+                        </div>
+                        <h3>REST API для заметок</h3>
+                        <p>Сервис с CRUD-операциями, регистрацией и хранением данных в базе.</p>
+                        <ul class="project__stack">
+                            <li>Flask</li><li>SQLite</li><li>JWT</li>
+                        </ul>
+                    </article>
+                    <article class="project reveal">
+                        <div class="project__top">
+                            <span class="project__tag">Python · aiogram</span>
+                        </div>
+                        <h3>Telegram-бот</h3>
+                        <p>Бот с меню на клавиатуре, командами и уведомлениями для пользователей.</p>
+                        <ul class="project__stack">
+                            <li>aiogram</li><li>requests</li><li>JSON</li>
+                        </ul>
+                    </article>
+                    <article class="project reveal">
+                        <div class="project__top">
+                            <span class="project__tag">Python · FastAPI</span>
+                        </div>
+                        <h3>API сокращения ссылок</h3>
+                        <p>Сервис коротких ссылок со статистикой переходов и валидацией данных.</p>
+                        <ul class="project__stack">
+                            <li>FastAPI</li><li>Pydantic</li><li>Uvicorn</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTS -->
+        <section class="section" id="contacts">
+            <div class="container">
+                <h2 class="section__title reveal">Контакты</h2>
+                <p class="section__lead reveal">Открыт к общению, обмену опытом и новым идеям.</p>
+                <div class="contacts reveal">
+                    <a class="contact" href="https://t.me/" target="_blank" rel="noopener">
+                        <span class="contact__icon">✈️</span>
+                        <span class="contact__label">Telegram</span>
+                        <span class="contact__value">@kirill</span>
+                    </a>
+                    <a class="contact" href="https://github.com/" target="_blank" rel="noopener">
+                        <span class="contact__icon">🐙</span>
+                        <span class="contact__label">GitHub</span>
+                        <span class="contact__value">github.com/kirill</span>
+                    </a>
+                    <a class="contact" href="mailto:kirill@example.com">
+                        <span class="contact__icon">✉️</span>
+                        <span class="contact__label">Email</span>
+                        <span class="contact__value">kirill@example.com</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>© <span id="year"></span> Кирилл. Сделано с любовью к Python.</p>
+            <a href="#hero" class="footer__top">Наверх ↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
